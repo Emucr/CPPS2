@@ -33,11 +33,11 @@ $("form").submit(function (e) {
     if (!checkNickname(nickname)) {
         $('#nickname').addClass('is-invalid').focus();
         $('.form-error').text('Invalid nickname').show();
-        isValid = true;
+        isValid = false;
     } else if (nickname.length < 1 || nickname.length > 25) {
         $('#nickname').addClass('is-invalid').focus();
         $('.form-error').text('Invalid nickname').show();
-        isValid = true;
+        isValid = false;
     } else {
         $('#nickname').removeClass('is-invalid');
     }
